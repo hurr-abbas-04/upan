@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UPAN | United Programmers &amp; Network</title>
+<meta name="description" content="UPAN is a technology and programming community where developers, students, designers, AI enthusiasts, and tech learners connect, learn, collaborate, and build.">
+<meta name="keywords" content="UPAN, United Programmers &amp; Network, programming community, developer community, coding community, programming network, technology community, AI community, web development community, developer networking">
+<link rel="canonical" href="https://upan.community/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="UPAN">
+<meta property="og:title" content="UPAN | United Programmers &amp; Network">
+<meta property="og:description" content="A community for programmers, developers, designers, AI enthusiasts, and technology learners building the future together.">
+<meta property="og:url" content="https://upan.community/">
+<meta property="og:image" content="https://upan.community/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="UPAN — United Programmers &amp; Network">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="UPAN | United Programmers &amp; Network">
+<meta name="twitter:description" content="Build. Connect. Grow. A technology and programming community for people who build.">
+<meta name="twitter:image" content="https://upan.community/assets/og-image.png">
+<meta name="theme-color" content="#0B0F14" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<script>
+  (function () {
+    var KEY = "upan-theme";
+    var stored = null;
+    try { stored = localStorage.getItem(KEY); } catch (e) {}
+    var mode = stored === "light" || stored === "dark" || stored === "system" ? stored : "system";
+    var resolved = mode === "system"
+      ? (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
+      : mode;
+    var root = document.documentElement;
+    root.classList.add("js");
+    root.setAttribute("data-theme", resolved);
+    root.setAttribute("data-theme-mode", mode);
+  })();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "UPAN",
+  "alternateName": "United Programmers & Network",
+  "url": "https://upan.community/",
+  "description": "A technology and programming community where developers, students, designers, AI enthusiasts, and technology learners connect, collaborate, learn, and build.",
+  "slogan": "Learn. Build. Connect.",
+  "memberOf": { "@type": "Project", "name": "UPAN Community" },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "membership",
+    "url": "https://tally.so/r/gDldRD"
+  }
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ===================== Navbar ===================== -->
+<header class="navbar" id="navbar">
+  <div class="container navbar-inner">
+    <a class="brand" href="#home" aria-label="UPAN — home">
+      <span class="brand-logo" aria-hidden="true"></span>
+      <span class="brand-name">UPAN</span>
+    </a>
+
+    <nav class="nav-links" id="nav-links" aria-label="Primary navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#community">Community</a>
+      <a href="#why">Why UPAN</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <div class="navbar-actions">
+      <div class="theme-switcher" data-theme-switcher>
+        <button class="theme-trigger" type="button" data-theme-trigger
+                aria-haspopup="true" aria-expanded="false" aria-controls="theme-menu"
+                aria-label="Theme: system (follows your device)">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" data-theme-trigger-icon>
+            <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+            <path d="M8 21h8M12 17v4"></path>
+          </svg>
+          <span class="theme-trigger-label" data-theme-trigger-label>System</span>
+        </button>
+        <div class="theme-menu" id="theme-menu" role="radiogroup" aria-label="Select theme" hidden>
+          <button class="theme-option" type="button" role="radio" aria-checked="false" data-theme-value="light">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+            </svg>
+            <span>Light</span>
+          </button>
+          <button class="theme-option" type="button" role="radio" aria-checked="false" data-theme-value="dark">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
+            </svg>
+            <span>Dark</span>
+          </button>
+          <button class="theme-option" type="button" role="radio" aria-checked="true" data-theme-value="system">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+              <path d="M8 21h8M12 17v4"></path>
+            </svg>
+            <span>System</span>
+          </button>
+        </div>
+      </div>
+
+      <a class="btn btn-primary btn-sm join-cta" href="https://tally.so/r/gDldRD" target="_blank" rel="noopener">Join UPAN</a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <nav aria-label="Mobile navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#community">Community</a>
+      <a href="#why">Why UPAN</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn-primary" href="https://tally.so/r/gDldRD" target="_blank" rel="noopener">Join UPAN</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <!-- ===================== Hero ===================== -->
+  <section class="hero" id="home">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-grid"></div>
+      <svg class="hero-nodes" viewBox="0 0 600 340" fill="none" aria-hidden="true">
+        <path d="M60 260 L200 120 L360 200 L520 70" stroke="currentColor" stroke-width="1"></path>
+        <path d="M200 120 L240 290 L520 70" stroke="currentColor" stroke-width="1"></path>
+        <path d="M60 260 L240 290" stroke="currentColor" stroke-width="1"></path>
+        <g fill="currentColor">
+          <circle cx="60" cy="260" r="4"></circle>
+          <circle cx="200" cy="120" r="5"></circle>
+          <circle cx="360" cy="200" r="4"></circle>
+          <circle cx="520" cy="70" r="5"></circle>
+          <circle cx="240" cy="290" r="4"></circle>
+        </g>
+      </svg>
+    </div>
+
+    <div class="container hero-inner">
+      <p class="eyebrow">United Programmers &amp; Network</p>
+      <h1 class="hero-title">Build. Connect. Grow.</h1>
+      <p class="hero-lede">UPAN is a community for programmers, developers, designers, AI enthusiasts, and technology learners building the future together.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://tally.so/r/gDldRD" target="_blank" rel="noopener">Join UPAN</a>
+        <a class="btn btn-secondary" href="#community">Explore Community</a>
+      </div>
+      <ul class="hero-tags" aria-label="Areas we cover">
+        <li>Programming</li><li>Web</li><li>AI</li><li>Design</li><li>Projects</li><li>Learning</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== About ===================== -->
+  <section class="section" id="about">
+    <div class="container split">
+      <div class="split-copy reveal">
+        <p class="section-label">About UPAN</p>
+        <h2>Built around people who build.</h2>
+        <p class="section-lede">United Programmers &amp; Network (UPAN) is a technology community created to bring people together around programming, software development, artificial intelligence, design, innovation, and learning.</p>
+        <a class="text-link" href="#community">See what people are building <span aria-hidden="true">&rarr;</span></a>
+      </div>
+      <ul class="pillars reveal">
+        <li><span class="pillar-num">01</span><h3>Learning</h3><p>Grow your skills together, at your own pace.</p></li>
+        <li><span class="pillar-num">02</span><h3>Collaboration</h3><p>Work on ideas and projects with others.</p></li>
+        <li><span class="pillar-num">03</span><h3>Projects</h3><p>Turn experiments into things you can show.</p></li>
+        <li><span class="pillar-num">04</span><h3>Networking</h3><p>Meet people who share your interests.</p></li>
+        <li><span class="pillar-num">05</span><h3>Opportunities</h3><p>Stay close to community activities and calls.</p></li>
+        <li><span class="pillar-num">06</span><h3>Knowledge sharing</h3><p>What one person learns, everyone gains.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== Community areas ===================== -->
+  <section class="section section-alt" id="community">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="section-label">Community areas</p>
+        <h2>What are you building?</h2>
+        <p class="section-lede">Pick a lane, or move between a few. Every area is open to members at any level.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          </div>
+          <h3>Programming</h3>
+          <p>Learn, practice, and discuss programming concepts with other developers.</p>
+        </article>
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.6 3 2.6 15 0 18M12 3c-2.6 3-2.6 15 0 18"></path></svg>
+          </div>
+          <h3>Web Development</h3>
+          <p>Explore modern frontend, backend, and full-stack development.</p>
+        </article>
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="7" width="16" height="12" rx="3"></rect><path d="M12 3v4M9 12h.01M15 12h.01M9.5 16h5"></path></svg>
+          </div>
+          <h3>Artificial Intelligence</h3>
+          <p>Discuss AI tools, applications, experiments, and emerging technologies.</p>
+        </article>
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7.5 4.5v9L12 21l-7.5-4.5v-9L12 3z"></path><path d="M12 12l7.5-4.5M12 12v9M12 12L4.5 7.5"></path></svg>
+          </div>
+          <h3>Design</h3>
+          <p>Share ideas and explore UI, UX, graphics, and creative technology.</p>
+        </article>
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v4M12 16v4M4 12h4M16 12h4"></path><circle cx="12" cy="12" r="3.5"></circle></svg>
+          </div>
+          <h3>Projects &amp; Innovation</h3>
+          <p>Build projects, share ideas, and collaborate with others.</p>
+        </article>
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"></path><path d="M8 7.5h8M8 11h5"></path></svg>
+          </div>
+          <h3>Learning &amp; Resources</h3>
+          <p>Exchange useful resources, tutorials, guides, and knowledge.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Why UPAN ===================== -->
+  <section class="section" id="why">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="section-label">Why UPAN</p>
+        <h2>More than a community.</h2>
+        <p class="section-lede">What you get out of UPAN depends on what you put in. Here's what the space is made for.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="feature reveal">
+          <h3>Meet Tech Enthusiasts</h3>
+          <p>Connect with people interested in technology and programming.</p>
+        </article>
+        <article class="feature reveal">
+          <h3>Collaborate</h3>
+          <p>Find people to learn and build projects with.</p>
+        </article>
+        <article class="feature reveal">
+          <h3>Share Your Work</h3>
+          <p>Showcase projects, experiments, designs, and ideas.</p>
+        </article>
+        <article class="feature reveal">
+          <h3>Learn</h3>
+          <p>Exchange knowledge and discover new technologies.</p>
+        </article>
+        <article class="feature reveal">
+          <h3>Discover Opportunities</h3>
+          <p>Stay connected to community opportunities and activities.</p>
+        </article>
+        <article class="feature reveal">
+          <h3>Build Your Network</h3>
+          <p>Create meaningful professional and learning connections.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== How it works ===================== -->
+  <section class="section section-alt" id="how">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="section-label">How it works</p>
+        <h2>Five steps, one loop.</h2>
+      </div>
+      <ol class="steps">
+        <li class="reveal"><span class="step-num">01</span><h3>Join</h3><p>Complete the joining form and become part of the network.</p></li>
+        <li class="reveal"><span class="step-num">02</span><h3>Connect</h3><p>Introduce yourself and find people building what you're into.</p></li>
+        <li class="reveal"><span class="step-num">03</span><h3>Learn</h3><p>Ask questions, share findings, and pick up new skills together.</p></li>
+        <li class="reveal"><span class="step-num">04</span><h3>Build</h3><p>Start a project, alone or as a team, with support around you.</p></li>
+        <li class="reveal"><span class="step-num">05</span><h3>Share</h3><p>Show what you made, and pass what you learned forward.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===================== Community experience ===================== -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="section-label">Who it's for</p>
+        <h2>A place for every stage of the journey.</h2>
+        <p class="section-lede">UPAN is designed for people at different points in technology — learning together makes the gap between stages smaller.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="persona reveal"><h3>Students</h3><p>Explore technology and build your skills.</p></article>
+        <article class="persona reveal"><h3>Beginners</h3><p>Learn alongside people who are also growing.</p></article>
+        <article class="persona reveal"><h3>Developers</h3><p>Share knowledge, projects, and ideas.</p></article>
+        <article class="persona reveal"><h3>Designers</h3><p>Connect with technical and creative people.</p></article>
+        <article class="persona reveal"><h3>AI Enthusiasts</h3><p>Experiment with emerging AI technologies.</p></article>
+        <article class="persona reveal"><h3>Builders</h3><p>Turn ideas into real projects.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Join CTA ===================== -->
+  <section class="join" id="join">
+    <div class="container join-inner reveal">
+      <p class="section-label on-accent">Join UPAN</p>
+      <h2>Your next project could start with one connection.</h2>
+      <p class="join-lede">Join UPAN and connect with people who are learning, building, experimenting, and growing in technology.</p>
+      <a class="btn btn-invert" href="https://tally.so/r/gDldRD" target="_blank" rel="noopener">Join UPAN</a>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="section" id="faq">
+    <div class="container narrow">
+      <div class="section-head reveal">
+        <p class="section-label">FAQ</p>
+        <h2>Questions, answered.</h2>
+      </div>
+      <div class="faq reveal">
+        <details>
+          <summary>What is UPAN?</summary>
+          <div class="faq-body"><p>UPAN stands for United Programmers &amp; Network. It is a community centered around programming, technology, learning, collaboration, and innovation.</p></div>
+        </details>
+        <details>
+          <summary>Who can join UPAN?</summary>
+          <div class="faq-body"><p>Students, beginners, developers, designers, AI enthusiasts, and anyone interested in technology can join.</p></div>
+        </details>
+        <details>
+          <summary>Do I need to be an experienced programmer?</summary>
+          <div class="faq-body"><p>No. UPAN is designed for people at different stages of their technology journey.</p></div>
+        </details>
+        <details>
+          <summary>What can I do in the community?</summary>
+          <div class="faq-body"><p>You can learn, connect with others, share projects, collaborate, exchange resources, and participate in community activities.</p></div>
+        </details>
+        <details>
+          <summary>How do I join UPAN?</summary>
+          <div class="faq-body"><p>Click the Join UPAN button and complete the official joining form.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ===================== Footer ===================== -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="brand-logo brand-logo-lg" aria-hidden="true"></span>
+      <div class="footer-wordmark">
+        <p class="footer-name">UPAN</p>
+        <p class="footer-sub">United Programmers &amp; Network</p>
+        <p class="footer-tagline">Learn. Build. Connect.</p>
+      </div>
+    </div>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#community">Community</a>
+      <a href="#why">Why UPAN</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-primary btn-sm" href="https://tally.so/r/gDldRD" target="_blank" rel="noopener">Join UPAN</a>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; 2026 UPAN. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
